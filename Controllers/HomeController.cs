@@ -22,6 +22,10 @@ namespace Lesson51.Controllers
         {
             return View();
         }
+        public IActionResult Manufacturer()
+        {
+            return Redirect("https://mi-shop.kg/product-category/smartphones/xiaomi-12/");
+        }
 
         public IActionResult Privacy()
         {
