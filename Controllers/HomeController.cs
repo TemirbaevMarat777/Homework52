@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -25,6 +26,12 @@ namespace Lesson51.Controllers
         public IActionResult Manufacturer(string company)
         {
             return Redirect($"https://{company}.com/");
+        }
+
+        public IActionResult DownloadFile()
+        {
+            var filePath = Path.Combine("~/Files", "about.txt");
+            return File(filePath, "application/txt", "about.txt");
         }
 
         public IActionResult Privacy()
