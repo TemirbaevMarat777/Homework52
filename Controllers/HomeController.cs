@@ -22,9 +22,9 @@ namespace Lesson51.Controllers
         {
             return View();
         }
-        public IActionResult Manufacturer()
+        public IActionResult Manufacturer(string company)
         {
-            return Redirect("https://mi-shop.kg/product-category/smartphones/xiaomi-12/");
+            return Redirect($"https://{company}.com/");
         }
 
         public IActionResult Privacy()
